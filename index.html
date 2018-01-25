@@ -203,8 +203,11 @@ ga('send', 'pageview');
 <p>$V = {v_0, v_1, …, v_n }$，$E = {(v_i, v_j): x_j - x_i \leqslant b_k } \bigcup {(v_0, v_1), (v_0, v_2, …, (v_0, v_n)}$。</p>
 <p>这里的$v_0$可以看作是一个额外的节点，用来保证图中至少有一个节点，并且从其出发可以到达所有的其他的节点。其中，如果$x_j - x_i \leqslant b_k$是一个差分约束条件，则边$(v_i, v_j)$的权重为$w(v_i, v_j) = b_k$。</p>
 <p>举例说明：</p>
-<p>对于一组差分约束条件：<br>$$<br>\begin{cases}<br>x_1 - x_2 \leqslant 0 \<br>x_1 - x_5 \leqslant -1 \<br>x_2 - x_5 \leqslant 1\<br>x_3 - x_1 \leqslant 5\<br>x_4 - x_1 \leqslant 4\<br>x_4 - x_3 \leqslant -1\<br>x_5 - x_3 \leqslant -3\<br>x_5 - x_4 \leqslant -3\<br>\end{cases}<br>$$<br>可以描绘出如下的差分约束系统的约束图：</p>
-<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F.png" width="60%" align="center"></p>
+<p>对于一组差分约束条件：<br>$$<br>\begin{cases}<br>x_1 - x_2 \leqslant 0\<br>x_1 - x_5 \leqslant -1\<br>x_2 - x_5 \leqslant 1\<br>x_3 - x_1 \leqslant 5\<br>x_4 - x_1 \leqslant 4\<br>x_4 - x_3 \leqslant -1\<br>x_5 - x_3 \leqslant -3\<br>x_5 - x_4 \leqslant -3\<br>\end{cases}\,<br>$$<br>可以描绘出如下的差分约束系统的约束图：</p>
+<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F.png" width="50%" align="center"></p>
+<p>其中，$(-5, -3, 0, -1, -4)$为满足条件的一个解。</p>
+<p>不难发现，使用最短路算法中的松弛操作：$d(v) - d(u) \leqslant w(u, v)$，刚好可以转为一个差分约束的条件：$i - j \leqslant u$。于是，对于差分约束的问题，可以将未知数$x_i$对应一个顶点，将不等式$x_i - x_j \leqslant c$转化为一条从$x_j$到$x_i$权值为$c$的边。</p>
+<p>下面考虑两种特殊情况：</p>
 
       
 
