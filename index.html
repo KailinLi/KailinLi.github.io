@@ -195,7 +195,14 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="LCA-and-RMQ"><a href="#LCA-and-RMQ" class="headerlink" title="LCA and RMQ"></a>LCA and RMQ</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><h3 id="问题建模"><a href="#问题建模" class="headerlink" title="问题建模"></a>问题建模</h3><h3 id="求解方法"><a href="#求解方法" class="headerlink" title="求解方法"></a>求解方法</h3><h2 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h2><h3 id="Poj-1470-Closest-Common-Ancestors"><a href="#Poj-1470-Closest-Common-Ancestors" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧"><a href="#编程技术技巧" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><h3 id="Poj-1470-Closest-Common-Ancestors-1"><a href="#Poj-1470-Closest-Common-Ancestors-1" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计-1"><a href="#算法设计-1" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码-1"><a href="#程序代码-1" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析-1"><a href="#性能分析-1" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧-1"><a href="#编程技术技巧-1" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><h3 id="Poj-1470-Closest-Common-Ancestors-2"><a href="#Poj-1470-Closest-Common-Ancestors-2" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计-2"><a href="#算法设计-2" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码-2"><a href="#程序代码-2" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析-2"><a href="#性能分析-2" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧-2"><a href="#编程技术技巧-2" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4>
+        <h1 id="LCA-and-RMQ"><a href="#LCA-and-RMQ" class="headerlink" title="LCA and RMQ"></a>LCA and RMQ</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>LCA问题，即最近公共祖先问题。(Lowest common ancestor)</p>
+<p>指在一个树或者有向无环图中同时拥有v和w作为后代的最深的节点。在这里，定义一个节点也是其自己的后代，因此如果v是w的后代，那么w就是v和w的最近公共祖先。</p>
+<p>RMQ问题，即范围最值查询问题。(Range Minimum Query)</p>
+<p>针对数据集的一种条件查询。若给定一个数组$A[1, n]$范围最值查询指定一个范围条件$i$到$j$，要求取出$A[i, j]$中最大/小的元素。</p>
+<p>特别的，如果$A$上，任意两个相邻元素相差为$\pm1$，则称此$RMQ$问题为$\pm1RMQ$问题。</p>
+<h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><h3 id="问题建模"><a href="#问题建模" class="headerlink" title="问题建模"></a>问题建模</h3><p>对于一棵树而言，通过暴力的$DFS$计算总是可以求出一个可行的解出来。但是复杂度比较高，对于频繁的祖先查询很吃力。</p>
+<p>这里介绍一种离线的查询方法，即在获得所有的询问情况以后，再进行查询的操作，</p>
+<h3 id="求解方法"><a href="#求解方法" class="headerlink" title="求解方法"></a>求解方法</h3><h2 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h2><h3 id="Poj-1470-Closest-Common-Ancestors"><a href="#Poj-1470-Closest-Common-Ancestors" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧"><a href="#编程技术技巧" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><h3 id="Poj-1470-Closest-Common-Ancestors-1"><a href="#Poj-1470-Closest-Common-Ancestors-1" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计-1"><a href="#算法设计-1" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码-1"><a href="#程序代码-1" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析-1"><a href="#性能分析-1" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧-1"><a href="#编程技术技巧-1" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><h3 id="Poj-1470-Closest-Common-Ancestors-2"><a href="#Poj-1470-Closest-Common-Ancestors-2" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计-2"><a href="#算法设计-2" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码-2"><a href="#程序代码-2" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析-2"><a href="#性能分析-2" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧-2"><a href="#编程技术技巧-2" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4>
       
 
       
@@ -219,79 +226,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/26/LCA与RMQ问题/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-线段树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/线段树/">线段树</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/线段树/" class="archive-article-date">
-  	<time datetime="2018-01-26T13:14:29.948Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Segment-tree"><a href="#Segment-tree" class="headerlink" title="Segment tree"></a>Segment tree</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><h3 id="问题建模"><a href="#问题建模" class="headerlink" title="问题建模"></a>问题建模</h3><h3 id="求解方法"><a href="#求解方法" class="headerlink" title="求解方法"></a>求解方法</h3><h2 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h2><h3 id="Poj-1470-Closest-Common-Ancestors"><a href="#Poj-1470-Closest-Common-Ancestors" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧"><a href="#编程技术技巧" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><h3 id="Poj-1470-Closest-Common-Ancestors-1"><a href="#Poj-1470-Closest-Common-Ancestors-1" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计-1"><a href="#算法设计-1" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码-1"><a href="#程序代码-1" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析-1"><a href="#性能分析-1" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧-1"><a href="#编程技术技巧-1" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><h3 id="Poj-1470-Closest-Common-Ancestors-2"><a href="#Poj-1470-Closest-Common-Ancestors-2" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计-2"><a href="#算法设计-2" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码-2"><a href="#程序代码-2" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析-2"><a href="#性能分析-2" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧-2"><a href="#编程技术技巧-2" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/线段树/">阅读全文 >></a>
         </p>
       
 
@@ -366,6 +300,79 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/26/后缀数组/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-线段树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/26/线段树/">线段树</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/26/线段树/" class="archive-article-date">
+  	<time datetime="2018-01-26T13:14:29.948Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Segment-tree"><a href="#Segment-tree" class="headerlink" title="Segment tree"></a>Segment tree</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><h3 id="问题建模"><a href="#问题建模" class="headerlink" title="问题建模"></a>问题建模</h3><h3 id="求解方法"><a href="#求解方法" class="headerlink" title="求解方法"></a>求解方法</h3><h2 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h2><h3 id="Poj-1470-Closest-Common-Ancestors"><a href="#Poj-1470-Closest-Common-Ancestors" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧"><a href="#编程技术技巧" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><h3 id="Poj-1470-Closest-Common-Ancestors-1"><a href="#Poj-1470-Closest-Common-Ancestors-1" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计-1"><a href="#算法设计-1" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码-1"><a href="#程序代码-1" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析-1"><a href="#性能分析-1" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧-1"><a href="#编程技术技巧-1" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><h3 id="Poj-1470-Closest-Common-Ancestors-2"><a href="#Poj-1470-Closest-Common-Ancestors-2" class="headerlink" title="Poj 1470 Closest Common Ancestors"></a>Poj 1470 Closest Common Ancestors</h3><h4 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h4><h4 id="算法设计-2"><a href="#算法设计-2" class="headerlink" title="算法设计"></a>算法设计</h4><h4 id="程序代码-2"><a href="#程序代码-2" class="headerlink" title="程序代码"></a>程序代码</h4><h4 id="性能分析-2"><a href="#性能分析-2" class="headerlink" title="性能分析"></a>性能分析</h4><h4 id="编程技术技巧-2"><a href="#编程技术技巧-2" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/26/线段树/">阅读全文 >></a>
         </p>
       
 
@@ -1177,15 +1184,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">POJ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随感</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">联创</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">POJ</a>
               </li>
             
             <div class="clearfix"></div>
