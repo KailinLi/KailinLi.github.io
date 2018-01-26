@@ -182,7 +182,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/并查集/">UnionFind</a>
+      <a class="article-title" href="/2018/01/26/并查集/">并查集</a>
     </h1>
   
 
@@ -195,7 +195,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在计算机科学中，并查集是一种树型的数据结构，用于处理一些不相交集合（Disjoint Sets）的合并及查询问题。有一个联合-查找算法（union-find algorithm）定义了两个用于此数据结构的操作：</p>
+        <h1 id="UnionFind"><a href="#UnionFind" class="headerlink" title="UnionFind"></a>UnionFind</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在计算机科学中，并查集是一种树型的数据结构，用于处理一些不相交集合（Disjoint Sets）的合并及查询问题。有一个联合-查找算法（union-find algorithm）定义了两个用于此数据结构的操作：</p>
 <ul>
 <li>$Find$：确定元素属于哪一个子集。它可以被用来确定两个元素是否属于同一子集。</li>
 <li>$Union$：将两个子集合并成同一个集合。</li>
@@ -336,7 +336,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/24/差分约束系统/">System of Difference Constraints</a>
+      <a class="article-title" href="/2018/01/24/差分约束系统/">差分约束系统</a>
     </h1>
   
 
@@ -349,7 +349,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="差分约束系统"><a href="#差分约束系统" class="headerlink" title="差分约束系统"></a>差分约束系统</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先先引入一个通用的线性规划问题，给定一个$m \times n$的矩阵A，一个$m$维的向量$b$和一个$n$维向量$c$。希望能够找到一个$n$维的向量$x$，使得在由$Ax \leqslant b$给定的$m$个约束条件下优化目标函数$\sum_{i = 1}^n c_ix_i$，使得目标函数的取值最大。有时，我们并不关心目标函数，而是仅仅希望能找到一个<strong>可行解</strong>，即找到任何满足$Ax \leqslant b$的向量$x$，或者判断不存在可行解。</p>
+        <h1 id="System-of-Difference-Constraints"><a href="#System-of-Difference-Constraints" class="headerlink" title="System of Difference Constraints"></a>System of Difference Constraints</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先先引入一个通用的线性规划问题，给定一个$m \times n$的矩阵A，一个$m$维的向量$b$和一个$n$维向量$c$。希望能够找到一个$n$维的向量$x$，使得在由$Ax \leqslant b$给定的$m$个约束条件下优化目标函数$\sum_{i = 1}^n c_ix_i$，使得目标函数的取值最大。有时，我们并不关心目标函数，而是仅仅希望能找到一个<strong>可行解</strong>，即找到任何满足$Ax \leqslant b$的向量$x$，或者判断不存在可行解。</p>
 <p>观察一个特例情况，如果线性规划的矩阵$A$的每一行包括一个1和一个-1，其他的所有项皆为0。则对于$Ax \leqslant b$所给出的约束条件变为$m$个涉及$n$个变量的<strong>差额限制条件</strong>，此时每个约束条件退化为简单的线性不等式：$x_j - x_i \leqslant b_k$。这里$1 \leqslant i, j \leqslant n$，$i \neq j$，且$1 \leqslant k \leqslant m$。</p>
 <h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><h3 id="问题建模"><a href="#问题建模" class="headerlink" title="问题建模"></a>问题建模</h3><p>对于此类问题，可以从<strong>图论</strong>的角度进行理解。</p>
 <p>在一个$Ax \leqslant b$的差分约束系统中，我们将$m \times n$的线性规划矩阵$A$看作是一张由$n$个节点和$m$条边构成的图的邻接矩阵的转置。这里定义下<strong>约束图</strong>的概念：</p>
