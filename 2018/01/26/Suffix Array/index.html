@@ -8,37 +8,34 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>后缀数组 | 李恺林的四维空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#Suffix Array
-问题描述首先来考虑一个字符串匹配的问题。
+  <meta name="description" content="Suffix Array问题描述首先来考虑一个字符串匹配的问题。
 假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：
 
 这个问题可以通过$KMP$算法解决。
 但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。
-或者说，更进一步的，如果">
+或者说，更进一步的，如果我们">
 <meta property="og:type" content="article">
 <meta property="og:title" content="后缀数组">
 <meta property="og:url" content="http://yoursite.com/2018/01/26/Suffix Array/index.html">
 <meta property="og:site_name" content="李恺林的四维空间">
-<meta property="og:description" content="#Suffix Array
-问题描述首先来考虑一个字符串匹配的问题。
+<meta property="og:description" content="Suffix Array问题描述首先来考虑一个字符串匹配的问题。
 假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：
 
 这个问题可以通过$KMP$算法解决。
 但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。
-或者说，更进一步的，如果">
+或者说，更进一步的，如果我们">
 <meta property="og:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png">
 <meta property="og:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-6.png">
 <meta property="og:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-7.png">
-<meta property="og:updated_time" content="2018-01-27T17:57:54.333Z">
+<meta property="og:updated_time" content="2018-01-27T18:11:31.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="后缀数组">
-<meta name="twitter:description" content="#Suffix Array
-问题描述首先来考虑一个字符串匹配的问题。
+<meta name="twitter:description" content="Suffix Array问题描述首先来考虑一个字符串匹配的问题。
 假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：
 
 这个问题可以通过$KMP$算法解决。
 但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。
-或者说，更进一步的，如果">
+或者说，更进一步的，如果我们">
 <meta name="twitter:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png">
   
     <link rel="alternative" href="/atom.xml" title="李恺林的四维空间" type="application/atom+xml">
@@ -216,8 +213,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#Suffix Array</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来考虑一个字符串匹配的问题。</p>
+        <h1 id="Suffix-Array"><a href="#Suffix-Array" class="headerlink" title="Suffix Array"></a>Suffix Array</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来考虑一个字符串匹配的问题。</p>
 <p>假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：</p>
 <p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png" width="50%" align="center"></p>
 <p>这个问题可以通过$KMP$算法解决。</p>
@@ -401,7 +397,7 @@ ga('send', 'pageview');
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法介绍"><span class="toc-number">2.</span> <span class="toc-text">算法介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题建模"><span class="toc-number">2.1.</span> <span class="toc-text">问题建模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#求解方法"><span class="toc-number">2.2.</span> <span class="toc-text">求解方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题报告"><span class="toc-number">3.</span> <span class="toc-text">解题报告</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Poj-2406-Power-Strings"><span class="toc-number">3.1.</span> <span class="toc-text">Poj 2406 Power Strings</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题描述-1"><span class="toc-number">3.1.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法设计"><span class="toc-number">3.1.2.</span> <span class="toc-text">算法设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#程序代码"><span class="toc-number">3.1.3.</span> <span class="toc-text">程序代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#性能分析"><span class="toc-number">3.1.4.</span> <span class="toc-text">性能分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编程技术技巧"><span class="toc-number">3.1.5.</span> <span class="toc-text">编程技术技巧</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Poj-3693-Maximum-repetition-substring"><span class="toc-number">3.2.</span> <span class="toc-text">Poj 3693 Maximum repetition substring</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题描述-2"><span class="toc-number">3.2.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法设计-1"><span class="toc-number">3.2.2.</span> <span class="toc-text">算法设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#程序代码-1"><span class="toc-number">3.2.3.</span> <span class="toc-text">程序代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#性能分析-1"><span class="toc-number">3.2.4.</span> <span class="toc-text">性能分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编程技术技巧-1"><span class="toc-number">3.2.5.</span> <span class="toc-text">编程技术技巧</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Suffix-Array"><span class="toc-number">1.</span> <span class="toc-text">Suffix Array</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法介绍"><span class="toc-number">1.2.</span> <span class="toc-text">算法介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题建模"><span class="toc-number">1.2.1.</span> <span class="toc-text">问题建模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#求解方法"><span class="toc-number">1.2.2.</span> <span class="toc-text">求解方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题报告"><span class="toc-number">1.3.</span> <span class="toc-text">解题报告</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Poj-2406-Power-Strings"><span class="toc-number">1.3.1.</span> <span class="toc-text">Poj 2406 Power Strings</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题描述-1"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法设计"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">算法设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#程序代码"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">程序代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#性能分析"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">性能分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编程技术技巧"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">编程技术技巧</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Poj-3693-Maximum-repetition-substring"><span class="toc-number">1.3.2.</span> <span class="toc-text">Poj 3693 Maximum repetition substring</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题描述-2"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法设计-1"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">算法设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#程序代码-1"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">程序代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#性能分析-1"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">性能分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编程技术技巧-1"><span class="toc-number">1.3.2.5.</span> <span class="toc-text">编程技术技巧</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
