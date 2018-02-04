@@ -30,9 +30,9 @@
 对于这种情况，使用树状数组肯定是十分方便的，而且编程十分的简单。
 但是如果题目的要求更加的灵活，树状数组在很多的情况下是不适和的。(或者更准确的说，对设计技巧要求更高)
 现在需要有一个支持区间更新、区间查询等">
-<meta property="og:image" content="https://images0.cnblogs.com/blog/517264/201312/01204058-426dce8b8a05491b91edeba9ec2e4112.jpg">
+<meta property="og:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/SEGTree.png">
 <meta property="og:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-4.png">
-<meta property="og:updated_time" content="2018-01-27T17:57:47.803Z">
+<meta property="og:updated_time" content="2018-02-04T15:56:47.644Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线段树">
 <meta name="twitter:description" content="Segment Tree问题描述首先，回到树状数组的问题：
@@ -44,7 +44,7 @@
 对于这种情况，使用树状数组肯定是十分方便的，而且编程十分的简单。
 但是如果题目的要求更加的灵活，树状数组在很多的情况下是不适和的。(或者更准确的说，对设计技巧要求更高)
 现在需要有一个支持区间更新、区间查询等">
-<meta name="twitter:image" content="https://images0.cnblogs.com/blog/517264/201312/01204058-426dce8b8a05491b91edeba9ec2e4112.jpg">
+<meta name="twitter:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/SEGTree.png">
   
     <link rel="alternative" href="/atom.xml" title="李恺林的四维空间" type="application/atom+xml">
   
@@ -235,7 +235,7 @@ ga('send', 'pageview');
 <h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><h3 id="问题建模"><a href="#问题建模" class="headerlink" title="问题建模"></a>问题建模</h3><p>类似区间树，在各个节点保存一条线段（数组中的一段子数组），可以高效解决连续区间的动态查询问题，由于二叉结构的特性。</p>
 <p>线段树的每个节点表示一个区间，子节点则分别表示父节点的左右半区间，例如父亲的区间是$[a, b]$，那么$mid = \frac{a+b}{2}$，左儿子的区间是$[a, mid]$，右儿子的区间是$[mid + 1, b]$。</p>
 <p>于是，当我们需要查询一段数据的时候，只需要查询对应的大区间即可，而不用一个点一个点的查询。如下图所示：</p>
-<p><img src="https://images0.cnblogs.com/blog/517264/201312/01204058-426dce8b8a05491b91edeba9ec2e4112.jpg" width="40%" align="center"></p>
+<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/SEGTree.png" width="60%" align="center"></p>
 <p>如果我们需要查询$[0, 3]$上的最值，我们不需要查找$3$次找到结果，只要按照$2^k$的顺序，依次查找$[0, 2]$和$[3, 3]$即可。</p>
 <p>对于修改的问题，处理比较特殊。理论上，我们必须要将每个点的值进行修改以后，再重新更新它的所有的祖先节点。但是这样以来，复杂度就是$O(n\lg n)$了，不符合我们的要求。</p>
 <p>考虑一种方法，如果我们几乎每次都访问一个长区间，是不是最小的叶子节点上的值就不重要了呢？换句话说，如果操作都是基于长区间的，我们可以把这些区间当作是一个叶节点来进行操作。只要每次都修改这个区间的数值就好。</p>
@@ -399,18 +399,9 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2018/01/26/LCA and RMQ/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          LCA 与 RMQ 问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/01/26/Suffix Array/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">后缀数组</div>
+    <a href="/2018/01/26/LCA and RMQ/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LCA 与 RMQ 问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
