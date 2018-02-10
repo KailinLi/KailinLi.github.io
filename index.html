@@ -175,6 +175,91 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Segment Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/26/Segment Tree/">线段树</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/26/Segment Tree/" class="archive-article-date">
+  	<time datetime="2018-01-26T13:14:29.948Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Segment-Tree"><a href="#Segment-Tree" class="headerlink" title="Segment Tree"></a>Segment Tree</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先，回到树状数组的问题：</p>
+<p>给定$n$个数字，有两种频繁的操作需要处理：</p>
+<ul>
+<li>求$\sum_{k = i}^j A_k$；</li>
+<li>对某个$A_i$数据进行增减操作。</li>
+</ul>
+<p>对于这种情况，使用树状数组肯定是十分方便的，而且编程十分的简单。</p>
+<p>但是如果题目的要求更加的灵活，树状数组在很多的情况下是不适和的。(或者更准确的说，对设计技巧要求更高)</p>
+<p>现在需要有一个支持区间更新、区间查询等等操作的数据结构，并且要保证每个操作基本可以在$O(\lg n)$的时间完成。</p>
+<p>于是我们引入了线段树的数据结构。通过将整体区间进行分割，由叶节点管理最小的分割单元，其他节点以类似$2^k$的形式逐层进行管理。</p>
+        
+          <a class="article-more-a" href="/2018/01/26/Segment Tree/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/26/Segment Tree/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-LCA and RMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -307,91 +392,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/26/Suffix Array/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Segment Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/Segment Tree/">线段树</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/Segment Tree/" class="archive-article-date">
-  	<time datetime="2018-01-26T13:14:29.948Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Segment-Tree"><a href="#Segment-Tree" class="headerlink" title="Segment Tree"></a>Segment Tree</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先，回到树状数组的问题：</p>
-<p>给定$n$个数字，有两种频繁的操作需要处理：</p>
-<ul>
-<li>求$\sum_{k = i}^j A_k$；</li>
-<li>对某个$A_i$数据进行增减操作。</li>
-</ul>
-<p>对于这种情况，使用树状数组肯定是十分方便的，而且编程十分的简单。</p>
-<p>但是如果题目的要求更加的灵活，树状数组在很多的情况下是不适和的。(或者更准确的说，对设计技巧要求更高)</p>
-<p>现在需要有一个支持区间更新、区间查询等等操作的数据结构，并且要保证每个操作基本可以在$O(\lg n)$的时间完成。</p>
-<p>于是我们引入了线段树的数据结构。通过将整体区间进行分割，由叶节点管理最小的分割单元，其他节点以类似$2^k$的形式逐层进行管理。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/Segment Tree/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/Segment Tree/">阅读全文 >></a>
         </p>
       
 
@@ -1009,7 +1009,15 @@ MathJax.Hub.Queue(function() {
             </li>
           
             <li class="search-li">
-              <a href="https://jerrylifewzm.wixsite.com/blog" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Jerry Wu&#39;s Blog</a>
+              <a href="https://llag9810.github.io" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Yifan&#39;s Blog</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog.qzwlecr.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Qzwlecr&#39;s Blog</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://hustdanielhu.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>DanieHu&#39;s Blog</a>
             </li>
           
         </ul>
