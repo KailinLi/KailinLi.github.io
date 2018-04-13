@@ -255,6 +255,87 @@ ga('send', 'pageview');
 
 
   
+    <article id="post-Suffix Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/26/Suffix Array/">后缀数组</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/26/Suffix Array/" class="archive-article-date">
+  	<time datetime="2018-01-26T13:14:29.948Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Suffix-Array"><a href="#Suffix-Array" class="headerlink" title="Suffix Array"></a>Suffix Array</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来考虑一个字符串匹配的问题。</p>
+<p>假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：</p>
+<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png" width="50%" align=center /></p>
+<p>这个问题可以通过$KMP$算法解决。</p>
+<p>但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。</p>
+<p>或者说，更进一步的，如果我们都不能提前知道需要进行匹配的模版，需要我们对于一些动态的模版进行匹配，为了满足速度的要求，我们只能通过预处理$T$串，引入了后缀数组的概念。</p>
+        
+          <a class="article-more-a" href="/2018/01/26/Suffix Array/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/26/Suffix Array/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Segment Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -311,87 +392,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/26/Segment Tree/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Suffix Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/Suffix Array/">后缀数组</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/Suffix Array/" class="archive-article-date">
-  	<time datetime="2018-01-26T13:14:29.948Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Suffix-Array"><a href="#Suffix-Array" class="headerlink" title="Suffix Array"></a>Suffix Array</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来考虑一个字符串匹配的问题。</p>
-<p>假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：</p>
-<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png" width="50%" align=center /></p>
-<p>这个问题可以通过$KMP$算法解决。</p>
-<p>但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。</p>
-<p>或者说，更进一步的，如果我们都不能提前知道需要进行匹配的模版，需要我们对于一些动态的模版进行匹配，为了满足速度的要求，我们只能通过预处理$T$串，引入了后缀数组的概念。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/Suffix Array/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/Suffix Array/">阅读全文 >></a>
         </p>
       
 
