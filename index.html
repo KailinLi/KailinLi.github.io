@@ -175,6 +175,85 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-AVL in SML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/01/AVL in SML/">AVL in SML</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/01/AVL in SML/" class="archive-article-date">
+  	<time datetime="2018-05-01T08:28:37.041Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="AVL的SML实现"><a href="#AVL的SML实现" class="headerlink" title="AVL的SML实现"></a>AVL的SML实现</h1><p>我们通过一个简单的数据结构(AVL平衡二叉树)，对比了函数式语言和命令式语言的区别和联系。并且，通过一些大样例的实验，分析函数式和命令式语言在运行速度方面的特点。</p>
+<h2 id="与命令式C语言对比"><a href="#与命令式C语言对比" class="headerlink" title="与命令式C语言对比"></a>与命令式C语言对比</h2><p>AVL平衡树是在BST的基础上，加入平衡操作得到的。具体来说，对于一棵AVL树的插入和删除操作，我们必须要保证树的平衡性，即某个节点的左右孩子的高度之差最多为1。由此，引入了旋转的操作，分别为左旋、右旋、双左旋和双右旋。</p>
+<h3 id="AVL定义"><a href="#AVL定义" class="headerlink" title="AVL定义"></a>AVL定义</h3><p>首先，需要定义这个数据结构。对于SML来说，提供了类似<code>typedef</code>和<code>struct</code>的语法，可以得到如下的定义：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">type data = int;</div><div class="line">type height = int;</div><div class="line">datatype AVL = Leaf</div><div class="line">            |  Node of AVL * data * height * AVL;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/05/01/AVL in SML/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">函数式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/01/AVL in SML/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Functional Programming" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -223,86 +302,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/05/01/Functional Programming/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-LCA and RMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/LCA and RMQ/">LCA 与 RMQ 问题</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/LCA and RMQ/" class="archive-article-date">
-  	<time datetime="2018-01-26T13:14:29.948Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="LCA-and-RMQ"><a href="#LCA-and-RMQ" class="headerlink" title="LCA and RMQ"></a>LCA and RMQ</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>LCA问题，即最近公共祖先问题。(Lowest common ancestor)</p>
-<p>指在一个树或者有向无环图中同时拥有v和w作为后代的最深的节点。在这里，定义一个节点也是其自己的后代，因此如果v是w的后代，那么w就是v和w的最近公共祖先。</p>
-<p>RMQ问题，即范围最值查询问题。(Range Minimum Query)</p>
-<p>针对数据集的一种条件查询。若给定一个数组$A[1, n]$范围最值查询指定一个范围条件$i$到$j$，要求取出$A[i, j]$中最大/小的元素。</p>
-<p>特别的，如果$A$上，任意两个相邻元素相差为$\pm1$，则称此$RMQ$问题为$\pm1RMQ$问题。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/">阅读全文 >></a>
         </p>
       
 
@@ -384,6 +383,86 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/26/Suffix Array/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-LCA and RMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/26/LCA and RMQ/">LCA 与 RMQ 问题</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/26/LCA and RMQ/" class="archive-article-date">
+  	<time datetime="2018-01-26T13:14:29.948Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="LCA-and-RMQ"><a href="#LCA-and-RMQ" class="headerlink" title="LCA and RMQ"></a>LCA and RMQ</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>LCA问题，即最近公共祖先问题。(Lowest common ancestor)</p>
+<p>指在一个树或者有向无环图中同时拥有v和w作为后代的最深的节点。在这里，定义一个节点也是其自己的后代，因此如果v是w的后代，那么w就是v和w的最近公共祖先。</p>
+<p>RMQ问题，即范围最值查询问题。(Range Minimum Query)</p>
+<p>针对数据集的一种条件查询。若给定一个数组$A[1, n]$范围最值查询指定一个范围条件$i$到$j$，要求取出$A[i, j]$中最大/小的元素。</p>
+<p>特别的，如果$A$上，任意两个相邻元素相差为$\pm1$，则称此$RMQ$问题为$\pm1RMQ$问题。</p>
+        
+          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/">阅读全文 >></a>
         </p>
       
 
@@ -712,85 +791,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/24/System of Difference Constraints/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ASPLOS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/17/ASPLOS/">ASPLOS半日行</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/17/ASPLOS/" class="archive-article-date">
-  	<time datetime="2017-04-17T13:09:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ASPLOS半日行"><a href="#ASPLOS半日行" class="headerlink" title="ASPLOS半日行"></a>ASPLOS半日行</h1><p>真是出乎意料，自己能以<strong>本科生</strong>的身份</p>
-<p>体验了计算机<strong>顶级</strong>会议<strong>ASPLOS</strong> <em>2017</em></p>
-<p>作为一个还在刷 <em>CSAPP</em> 的小白，十分幸运能够来到西安，和众多世界级的科学家坐在一起，聆听并感受<strong>CS</strong>最前沿的科技革新。在此，首先要感谢的是为我们争取机会的@石老师，以及同行的15级ACM班全体大佬们。</p>
-<center><br><br><img src="http://oklhb00qa.bkt.clouddn.com/ASPLOS00002.jpg" width="85%" align=center /><br><br></center>
-        
-          <a class="article-more-a" href="/2017/04/17/ASPLOS/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随感</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/17/ASPLOS/">阅读全文 >></a>
         </p>
       
 
