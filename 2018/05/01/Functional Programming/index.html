@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>李恺林的四维空间</title>
+  <title>函数式语言SML简介 | 李恺林的四维空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="华中科技大学">
-<meta property="og:type" content="website">
-<meta property="og:title" content="李恺林的四维空间">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="函数式语言SML简介摘要从函数式语言家族的起源来看，其问世以来的数十年间，始终是作为一类小众的语言。大多数情况下，只有实验室对其进行一些理论上的研究。但是，随着编程语言的不断发展，我们看到越来越多的主流语言，将函数式特性或者函数式思想纳入到了自己的体系之中。
+通过对于函数式语言特性的分析，我们可以了解到其独特的优点。正式由于其严格的类型检查和良好的封装，使得程序员能加不容易写出错误的程序。同时，得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数式语言SML简介">
+<meta property="og:url" content="http://yoursite.com/2018/05/01/Functional Programming/index.html">
 <meta property="og:site_name" content="李恺林的四维空间">
-<meta property="og:description" content="华中科技大学">
+<meta property="og:description" content="函数式语言SML简介摘要从函数式语言家族的起源来看，其问世以来的数十年间，始终是作为一类小众的语言。大多数情况下，只有实验室对其进行一些理论上的研究。但是，随着编程语言的不断发展，我们看到越来越多的主流语言，将函数式特性或者函数式思想纳入到了自己的体系之中。
+通过对于函数式语言特性的分析，我们可以了解到其独特的优点。正式由于其严格的类型检查和良好的封装，使得程序员能加不容易写出错误的程序。同时，得">
+<meta property="og:updated_time" content="2018-04-30T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李恺林的四维空间">
-<meta name="twitter:description" content="华中科技大学">
+<meta name="twitter:title" content="函数式语言SML简介">
+<meta name="twitter:description" content="函数式语言SML简介摘要从函数式语言家族的起源来看，其问世以来的数十年间，始终是作为一类小众的语言。大多数情况下，只有实验室对其进行一些理论上的研究。但是，随着编程语言的不断发展，我们看到越来越多的主流语言，将函数式特性或者函数式思想纳入到了自己的体系之中。
+通过对于函数式语言特性的分析，我们可以了解到其独特的优点。正式由于其严格的类型检查和良好的封装，使得程序员能加不容易写出错误的程序。同时，得">
   
     <link rel="alternative" href="/atom.xml" title="李恺林的四维空间" type="application/atom+xml">
   
@@ -173,16 +177,14 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Functional Programming" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Functional Programming" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/01/Functional Programming/">函数式语言SML简介</a>
+    <h1 class="article-title" itemprop="name">
+      函数式语言SML简介
     </h1>
   
 
@@ -197,9 +199,32 @@ ga('send', 'pageview');
       
         <h1 id="函数式语言SML简介"><a href="#函数式语言SML简介" class="headerlink" title="函数式语言SML简介"></a>函数式语言SML简介</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>从函数式语言家族的起源来看，其问世以来的数十年间，始终是作为一类小众的语言。大多数情况下，只有实验室对其进行一些理论上的研究。但是，随着编程语言的不断发展，我们看到越来越多的主流语言，将函数式特性或者函数式思想纳入到了自己的体系之中。</p>
 <p>通过对于函数式语言特性的分析，我们可以了解到其独特的优点。正式由于其严格的类型检查和良好的封装，使得程序员能加不容易写出错误的程序。同时，得益于其数学思想，程序员可以很方便的写出更加优雅且利于并行的程序。这正是函数式特性在现代编程语言如C++、Java、Python不断得到加强的原因。</p>
-        
-          <a class="article-more-a" href="/2018/05/01/Functional Programming/#more">more >></a>
-        
+<a id="more"></a>
+<p>在下一篇文章中，我们将通过一个简单的数据结构(AVL平衡二叉树)，对比了函数式语言和命令式语言的区别和联系。并且，通过一些大样例的实验，分析函数式和命令式语言在运行速度方面的特点。</p>
+<p>结果，函数式语言的表现不容乐观，与C语言的差距非常巨大。在代码书写上可能SML体验更佳。但是效率的问题，导致了其只能用于教学和科研。</p>
+<p><strong>关键词</strong>：函数式特点  AVL数据结构  命令式对比  $\lambda$表达式</p>
+<h2 id="函数式语言特点"><a href="#函数式语言特点" class="headerlink" title="函数式语言特点"></a>函数式语言特点</h2><h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>计算机的构造十分的复杂，如果学习过计算机组成原理、操作系统或者系统结构必然知道，不论是CPU的流水执行、Cache的缓存命中、分页分段调度还是进程间通信等等，都是极为复杂的。如果不是专业去编写OS或者对于性能要求极为苛刻的处理程序，我们几乎不可能也不必要去关心这些过于底层的问题。</p>
+<p>正如芯片对电路的封装、操作系统对硬件的封装一样，编程语言也存在了大量的封装。高级的编程语言如C/C++，将程序变得易读易写。但是，这些语言在抽象的程度上，仍然没有摆脱硬件的控制，将一条条的语句翻译成了命令让计算机去执行。由于全局变量、共享环境等等因素，程序很容易出现意想不到的问题，写出的程序也很难并行的调用。</p>
+<p>但是函数式语言如ML的抽象却要高出很多。过程式的语言是面向命令的，而函数式语言，则是<strong>面向表达式</strong>的。函数式编程是一种编程模型，它将计算机运算看作是数学中函数的计算，并且避免了状态以及变量的概念。在函数式编程中所有的状态都是不可变的。一个<code>val x = x + 1</code>的程序段，仅仅是将<code>x</code>声明为<code>x + 1</code>这个值的别名。并没有修改原先的内容。同样，如果另外的一个函数里面使用了这个别名，函数的执行结果也不会随着<code>x</code>的变化而变化，值已经和函数<strong>绑定</strong>在了一起。</p>
+<p>同时，在ML语言中，我们也不必去关心内存分配的问题。和Java语言类似，程序员不需要考虑内存泄漏或者野指针之类的问题，ML提供了<strong>GC(垃圾回收)</strong>的机制，编写难度上要减少很多。</p>
+<p>###函数“一等公民”</p>
+<p>程序完全由函数构成，函数操控者数据结构。使用这个语言的人，完全不用关心计算机底层的内容。通过一个个数学表达式，就可以实现自己的目的。每次调用一个函数，对于同样的参数，获得的结果一定是相同的。没有“副作用”的产生。命令式编程天生的缺陷使并行编程模型变得非常复杂，都使程序员不堪重负，函数式编程语言的优势体现出来。函数式编程没有可变的变量，数据只读不写，因此，并发的问题迎刃而解。而且，相对于命令式编程而言，函数式编程大幅简化了并行计算的编写难度，不易出错且易于维护。这就是<strong>引用透明性</strong>。</p>
+<p>因为函数作为”一等公民“，我们可以很简单的将函数作为一个参数或者返回值使用。在C语言当中，我们可以通过传递函数指针的方式，来实现函数参数的调用。但是，指针毕竟只是指针，我们所传递的只是函数的执行地址，仍然摆脱不了底层的计算机结构。在C++11和Java8以后，我们可用通过$\lambda$表达式的方法，实现函数的传递。但是，从编译的角度上讲，这两种OOP的语言，仅仅是生成了一个匿名的类(Class)，使用的时候，传递了一个对象进去执行。</p>
+<p>但是，在函数式语言ML中，我们可以很方便的使用函数的特性，实现一个<strong>柯里函数(currying)</strong>。比如如下的例子：</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- fun mul x y z = x * y * z;</div><div class="line"><span class="title">val</span> mul = fn : int -&gt; int -&gt; int -&gt; int</div><div class="line">- val f = mul <span class="number">2</span> <span class="number">3</span>;</div><div class="line"><span class="title">val</span> f = fn : int -&gt; int</div><div class="line">- f <span class="number">10</span>;</div><div class="line"><span class="title">val</span> it = <span class="number">60</span> : int</div></pre></td></tr></table></figure>
+<p>可以看到，我们首先定义了一个mul函数，但是此函数经过了柯里化，如果使用命令式的思维来理解，这个函数接受一个int型的参数，返回一个接受int参数返回接受int参数返回int的函数的函数的函数。那么，使用这个函数，我们可以创造出新的函数，比如，val f = mul 2 3里面，f作为一个函数类型的值，它接受到一个int参数，并且返回此参数乘以6的结果。</p>
+<p>此外，利用这一特性，我们可以很容易的利用如flodr、map这样的高阶函数，实现批量的操作。算子是一种操作于另一个或者另几个函数之上的函数。对于map算子，当应用到函数$f$上时，返回另外的一个函数。实现如下的转化：<br>$$<br>[x_1, x_2, \ldots, x_n] \Rightarrow [f(x_1), f(x_2), \ldots, f(x_n)]<br>$$<br>对于另一个高阶函数foldr，应用于$f$和一个参数$e$时，实现了$f(x_1, f(x_2, \ldots, f(x_n, e)\ldots))$的效果，镜像对称的foldl，实现了$f(\ldots f(f(e, x_1), x_2)\ldots x_n)$。</p>
+<p>虽然现代的编程语言普遍支持了map、foreach的操作，但是仍然没有函数式语言自然。</p>
+<h3 id="多态类型检测"><a href="#多态类型检测" class="headerlink" title="多态类型检测"></a>多态类型检测</h3><p>ML在运行之前，编译器会检测所有模块的接口是否相容，以及数据是否一致的被使用。ML使用了<strong>模式匹配(pattern-matching)</strong>来分析参数。</p>
+<p>ML使用<strong>多态类型检测(polymorphic type checking)</strong>，大大减少了错误的产生的概率。对于C/C++之类的语言，隐式的类型转化虽然可以减少很多的代码量，但是也经常会导致严重的极难以察觉的bug。</p>
+<p>在C++中，参数可能发生隐式的转化或者其他一些由于编译器实现导致的问题。比如在C++编译器可能会将NULL定义为((void<em>)0)或者int类型的0。由于C++禁止(void </em>)类型的隐式转化，对于如下的语句：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">double</span> *dp = <span class="literal">NULL</span>;	<span class="comment">// 对于NULL = (void *)0 的情况，此句不能通过编译</span></div></pre></td></tr></table></figure>
+<p>如果定义为(void *)0，会出现无法隐式转换的问题。</p>
+<p>但是即使使用简单的int型的0，在使用函数重载的时候，仍然会出现冲突，比如如下的情况：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">char</span> *)</span></span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span>)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">	f(<span class="literal">NULL</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里产生了二义性的冲突，一般情况下，程序员认为传递一个NULL指针，应该去调用char <em>类型，但是这里却违反直觉的出现了编译错误。编译器无法判断NULL应该调用int还是char </em>。幸运的是，在C++11标准中，<code>nullptr</code>的引入解决了这个问题。并且，可以通过对于函数加入<code>explicit</code>禁止隐式的类型转化。但是，仍然没有给出一个足够的保证，使得程序员不会出错。</p>
+<p>同时，多态类型的引入，既保证了强类型语言的安全性，同时也十分的灵活方便。大多数的类型都是自动推导过来的。ML的多态性是基于类型模式的，这个类似于类型的模版。</p>
+
       
 
       
@@ -221,16 +246,75 @@ ga('send', 'pageview');
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/01/Functional Programming/">阅读全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/01/Functional Programming/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/01/AVL in SML/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">AVL in SML</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -245,585 +329,33 @@ ga('send', 'pageview');
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-AVL in SML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/01/AVL in SML/">AVL in SML</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/01/AVL in SML/" class="archive-article-date">
-  	<time datetime="2018-04-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="AVL的SML实现"><a href="#AVL的SML实现" class="headerlink" title="AVL的SML实现"></a>AVL的SML实现</h1><p>我们通过一个简单的数据结构(AVL平衡二叉树)，对比了函数式语言和命令式语言的区别和联系。并且，通过一些大样例的实验，分析函数式和命令式语言在运行速度方面的特点。</p>
-<h2 id="与命令式C语言对比"><a href="#与命令式C语言对比" class="headerlink" title="与命令式C语言对比"></a>与命令式C语言对比</h2><p>AVL平衡树是在BST的基础上，加入平衡操作得到的。具体来说，对于一棵AVL树的插入和删除操作，我们必须要保证树的平衡性，即某个节点的左右孩子的高度之差最多为1。由此，引入了旋转的操作，分别为左旋、右旋、双左旋和双右旋。</p>
-<h3 id="AVL定义"><a href="#AVL定义" class="headerlink" title="AVL定义"></a>AVL定义</h3><p>首先，需要定义这个数据结构。对于SML来说，提供了类似<code>typedef</code>和<code>struct</code>的语法，可以得到如下的定义：</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">type</span> <span class="keyword">data</span> = int;</span></div><div class="line"><span class="class"><span class="keyword">type</span> height = int;</span></div><div class="line"><span class="title">datatype</span> <span class="type">AVL</span> = <span class="type">Leaf</span></div><div class="line">            |  <span class="type">Node</span> <span class="keyword">of</span> <span class="type">AVL</span> * <span class="class"><span class="keyword">data</span> * height * <span class="type">AVL</span>;</span></div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/05/01/AVL in SML/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">函数式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/01/AVL in SML/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数式语言SML简介"><span class="toc-number">1.</span> <span class="toc-text">函数式语言SML简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#摘要"><span class="toc-number">1.1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数式语言特点"><span class="toc-number">1.2.</span> <span class="toc-text">函数式语言特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装"><span class="toc-number">1.2.1.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多态类型检测"><span class="toc-number">1.2.2.</span> <span class="toc-text">多态类型检测</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Suffix Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/Suffix Array/">后缀数组</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/Suffix Array/" class="archive-article-date">
-  	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Suffix-Array"><a href="#Suffix-Array" class="headerlink" title="Suffix Array"></a>Suffix Array</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来考虑一个字符串匹配的问题。</p>
-<p>假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：</p>
-<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png" width="50%" align=center /></p>
-<p>这个问题可以通过$KMP$算法解决。</p>
-<p>但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。</p>
-<p>或者说，更进一步的，如果我们都不能提前知道需要进行匹配的模版，需要我们对于一些动态的模版进行匹配，为了满足速度的要求，我们只能通过预处理$T$串，引入了后缀数组的概念。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/Suffix Array/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/Suffix Array/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
+        <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=3gX5c0OljPQyVGvzyknjOnOEDB1Szg8eAM2NoZxuz50"></script>
         
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-UnionFind" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/UnionFind/">并查集</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/UnionFind/" class="archive-article-date">
-  	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="UnionFind"><a href="#UnionFind" class="headerlink" title="UnionFind"></a>UnionFind</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在计算机科学中，并查集是一种树型的数据结构，用于处理一些不相交集合（Disjoint Sets）的合并及查询问题。有一个联合-查找算法（union-find algorithm）定义了两个用于此数据结构的操作：</p>
-<ul>
-<li>$Find$：确定元素属于哪一个子集。它可以被用来确定两个元素是否属于同一子集。</li>
-<li>$Union$：将两个子集合并成同一个集合。</li>
-</ul>
-<p>由于支持这两种操作，一个不相交集也常被称为联合-查找数据结构（union-find data structure）或合并-查找集合（merge-find set）。其他的重要方法，MakeSet，用于建立单元素集合。有了这些方法，许多经典的划分问题可以被解决。<br>为了更加精确的定义这些方法，需要定义如何表示集合。一种常用的策略是为每个集合选定一个固定的元素，称为代表，以表示整个集合。接着，$Find(x)$返回 x 所属集合的代表，而$Union$使用两个集合的代表作为参数。</p>
-<p>更进一步的，当两个元素之间的关系可以量化，并且关系可以合并时，可以使用带权并查集来维护元素之间的关系。</p>
-<p>带权并查集即是结点存有权值信息的并查集。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/UnionFind/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/UnionFind/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Segment Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/Segment Tree/">线段树</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/Segment Tree/" class="archive-article-date">
-  	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Segment-Tree"><a href="#Segment-Tree" class="headerlink" title="Segment Tree"></a>Segment Tree</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先，回到树状数组的问题：</p>
-<p>给定$n$个数字，有两种频繁的操作需要处理：</p>
-<ul>
-<li>求$\sum_{k = i}^j A_k$；</li>
-<li>对某个$A_i$数据进行增减操作。</li>
-</ul>
-<p>对于这种情况，使用树状数组肯定是十分方便的，而且编程十分的简单。</p>
-<p>但是如果题目的要求更加的灵活，树状数组在很多的情况下是不适和的。(或者更准确的说，对设计技巧要求更高)</p>
-<p>现在需要有一个支持区间更新、区间查询等等操作的数据结构，并且要保证每个操作基本可以在$O(\lg n)$的时间完成。</p>
-<p>于是我们引入了线段树的数据结构。通过将整体区间进行分割，由叶节点管理最小的分割单元，其他节点以类似$2^k$的形式逐层进行管理。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/Segment Tree/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/Segment Tree/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-LCA and RMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/LCA and RMQ/">LCA 与 RMQ 问题</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/LCA and RMQ/" class="archive-article-date">
-  	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="LCA-and-RMQ"><a href="#LCA-and-RMQ" class="headerlink" title="LCA and RMQ"></a>LCA and RMQ</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>LCA问题，即最近公共祖先问题。(Lowest common ancestor)</p>
-<p>指在一个树或者有向无环图中同时拥有v和w作为后代的最深的节点。在这里，定义一个节点也是其自己的后代，因此如果v是w的后代，那么w就是v和w的最近公共祖先。</p>
-<p>RMQ问题，即范围最值查询问题。(Range Minimum Query)</p>
-<p>针对数据集的一种条件查询。若给定一个数组$A[1, n]$范围最值查询指定一个范围条件$i$到$j$，要求取出$A[i, j]$中最大/小的元素。</p>
-<p>特别的，如果$A$上，任意两个相邻元素相差为$\pm1$，则称此$RMQ$问题为$\pm1RMQ$问题。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Binary Indexed Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/Binary Indexed Tree/">树状数组</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/Binary Indexed Tree/" class="archive-article-date">
-  	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Binary-Indexed-Tree"><a href="#Binary-Indexed-Tree" class="headerlink" title="Binary Indexed Tree"></a>Binary Indexed Tree</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来引入一个问题：</p>
-<p>给定$n$个数字，有两种频繁的操作需要处理：</p>
-<ul>
-<li>求$\sum_{k = i}^j A_k$；</li>
-<li>对某个$A_i$数据进行增减操作。</li>
-</ul>
-<p>如果我们使用普通的数组，这两种操作的复杂度分别为$O(n)$和$O(1)$，如果进行$m$次操作，最坏的情况下，复杂度是$O(mn)$的。</p>
-<p>所以，为了降低复杂度，我们可以使用一种数组数组的结构，可以将复杂度降低到$O(m\lg n)$。当然，可以使用$RMQ$的方法，但是$RMQ$的编程实现稍微麻烦些，所以这里介绍数组数组的方法。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/Binary Indexed Tree/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/Binary Indexed Tree/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-System of Difference Constraints" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/24/System of Difference Constraints/">差分约束系统</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/24/System of Difference Constraints/" class="archive-article-date">
-  	<time datetime="2018-01-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="System-of-Difference-Constraints"><a href="#System-of-Difference-Constraints" class="headerlink" title="System of Difference Constraints"></a>System of Difference Constraints</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先先引入一个通用的线性规划问题，给定一个$m \times n$的矩阵A，一个$m$维的向量$b$和一个$n$维向量$c$。希望能够找到一个$n$维的向量$x$，使得在由$Ax \leqslant b$给定的$m$个约束条件下优化目标函数$\sum_{i = 1}^n c_ix_i$，使得目标函数的取值最大。有时，我们并不关心目标函数，而是仅仅希望能找到一个<strong>可行解</strong>，即找到任何满足$Ax \leqslant b$的向量$x$，或者判断不存在可行解。</p>
-<p>观察一个特例情况，如果线性规划的矩阵$A$的每一行包括一个1和一个-1，其他的所有项皆为0。则对于$Ax \leqslant b$所给出的约束条件变为$m$个涉及$n$个变量的<strong>差额限制条件</strong>，此时每个约束条件退化为简单的线性不等式：$x_j - x_i \leqslant b_k$。这里$1 \leqslant i, j \leqslant n$，$i \neq j$，且$1 \leqslant k \leqslant m$。</p>
-        
-          <a class="article-more-a" href="/2018/01/24/System of Difference Constraints/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/24/System of Difference Constraints/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -846,8 +378,8 @@ ga('send', 'pageview');
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
