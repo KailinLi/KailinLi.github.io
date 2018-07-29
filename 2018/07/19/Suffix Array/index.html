@@ -6,17 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>李恺林的四维空间</title>
+  <title>后缀数组 | 李恺林的四维空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="华中科技大学">
-<meta property="og:type" content="website">
-<meta property="og:title" content="李恺林的四维空间">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="Suffix Array问题描述首先来考虑一个字符串匹配的问题。
+假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：
+
+这个问题可以通过$KMP$算法解决。
+但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。
+或者说，更进一步的，如果我们">
+<meta property="og:type" content="article">
+<meta property="og:title" content="后缀数组">
+<meta property="og:url" content="http://yoursite.com/2018/07/19/Suffix Array/index.html">
 <meta property="og:site_name" content="李恺林的四维空间">
-<meta property="og:description" content="华中科技大学">
+<meta property="og:description" content="Suffix Array问题描述首先来考虑一个字符串匹配的问题。
+假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：
+
+这个问题可以通过$KMP$算法解决。
+但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。
+或者说，更进一步的，如果我们">
+<meta property="og:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png">
+<meta property="og:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-6.png">
+<meta property="og:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-7.png">
+<meta property="og:updated_time" content="2018-07-19T06:25:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李恺林的四维空间">
-<meta name="twitter:description" content="华中科技大学">
+<meta name="twitter:title" content="后缀数组">
+<meta name="twitter:description" content="Suffix Array问题描述首先来考虑一个字符串匹配的问题。
+假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：
+
+这个问题可以通过$KMP$算法解决。
+但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。
+或者说，更进一步的，如果我们">
+<meta name="twitter:image" content="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png">
   
     <link rel="alternative" href="/atom.xml" title="李恺林的四维空间" type="application/atom+xml">
   
@@ -173,21 +193,19 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-LCA and RMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Suffix Array" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/19/LCA and RMQ/">LCA 与 RMQ 问题</a>
+    <h1 class="article-title" itemprop="name">
+      后缀数组
     </h1>
   
 
         
-        <a href="/2018/07/19/LCA and RMQ/" class="archive-article-date">
+        <a href="/2018/07/19/Suffix Array/" class="archive-article-date">
   	<time datetime="2018-07-19T06:25:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
 </a>
         
@@ -195,182 +213,70 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="LCA-and-RMQ"><a href="#LCA-and-RMQ" class="headerlink" title="LCA and RMQ"></a>LCA and RMQ</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>LCA问题，即最近公共祖先问题。(Lowest common ancestor)</p>
-<p>指在一个树或者有向无环图中同时拥有v和w作为后代的最深的节点。在这里，定义一个节点也是其自己的后代，因此如果v是w的后代，那么w就是v和w的最近公共祖先。</p>
-<p>RMQ问题，即范围最值查询问题。(Range Minimum Query)</p>
-<p>针对数据集的一种条件查询。若给定一个数组$A[1, n]$范围最值查询指定一个范围条件$i$到$j$，要求取出$A[i, j]$中最大/小的元素。</p>
-<p>特别的，如果$A$上，任意两个相邻元素相差为$\pm1$，则称此$RMQ$问题为$\pm1RMQ$问题。</p>
-        
-          <a class="article-more-a" href="/2018/07/19/LCA and RMQ/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/19/LCA and RMQ/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Segment Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/19/Segment Tree/">线段树</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/19/Segment Tree/" class="archive-article-date">
-  	<time datetime="2018-07-19T06:25:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Segment-Tree"><a href="#Segment-Tree" class="headerlink" title="Segment Tree"></a>Segment Tree</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先，回到树状数组的问题：</p>
-<p>给定$n$个数字，有两种频繁的操作需要处理：</p>
+        <h1 id="Suffix-Array"><a href="#Suffix-Array" class="headerlink" title="Suffix Array"></a>Suffix Array</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来考虑一个字符串匹配的问题。</p>
+<p>假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：</p>
+<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png" width="50%" align="center"></p>
+<p>这个问题可以通过$KMP$算法解决。</p>
+<p>但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。</p>
+<p>或者说，更进一步的，如果我们都不能提前知道需要进行匹配的模版，需要我们对于一些动态的模版进行匹配，为了满足速度的要求，我们只能通过预处理$T$串，引入了后缀数组的概念。</p>
+<a id="more"></a>
+<h2 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h2><h3 id="问题建模"><a href="#问题建模" class="headerlink" title="问题建模"></a>问题建模</h3><p>我们先来看$KMP$算法，$KMP$的重点和精华在于它的“失配函数”，是一种“用自己匹配自己”的思想。</p>
+<p>根据$P$的结构，来进行失配函数的构造。我们可以大概的猜测到这个思想：如果一段字符串不能满足匹配的条件，那么即使我进行右移的操作，根据$P$的性质不同，即有可能还是无法满足匹配条件的。</p>
+<p>失配函数的核心就在于找出：一旦出现了不匹配的情况，我们<strong>至少</strong>需要进行多少次的右移才<strong>有可能</strong>找到一个匹配情况。</p>
+<p>如果寻找到了失配函数，那么剩下的问题也就可以迎刃而解。</p>
+<p>对于后缀数组来说，问题要复杂的多，因为我们做不到对于模版的预处理，只能去处理文本串$T$。</p>
+<p>根据刘汝佳书上的例子，对于一个给定的字符串，比如$BANANA$，我们可以在它的最后添加一个$\$$，某个从来没有出现的符号，使得后缀一定可以和一颗$Trie$的叶节点一一对应。注意这里的$\$$比所有的字符都小。</p>
+<p>我们现在的任务就是将一个字符串的所有后缀按字典序进行一个排列。后缀就是从对应位置$i$开始到这个数组结束的全部字符组成的字符串。</p>
+<p>大体的思想是首先对于字符串进行一次排序，如图：</p>
+<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-6.png" width="40%" align="center"></p>
+<p>之后每次都对于一个二元组进行排序，这里的每一个二元组都可以看作是后缀前两个字符的名次。如图：</p>
+<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-7.png" width="40%" align="center"></p>
+<p>之后依次类推，对后缀的前$2^k$的元素进行排序等等。</p>
+<p>不过，分析可知，如果使用快速排序，这个算法的复杂度是$O(n\lg ^2n)$，仍然是比较高的。</p>
+<p>所以这里我们使用了基数排序的方法，每次的复杂度为$O(n)$，最后的总的复杂度是$O(n\lg n)$。</p>
+<h3 id="求解方法"><a href="#求解方法" class="headerlink" title="求解方法"></a>求解方法</h3><p>在前面我们已经详细讲解了算法的思想，具体实现上，不论是$KMP$还是后缀数组，都比较固定，基本没有太多的变化，可以套模版完成。</p>
+<p>对于$KMP$算法，首先需要计算失配函数：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">getFail</span> <span class="params">(<span class="keyword">char</span> *P, <span class="keyword">int</span> *f)</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> m = <span class="built_in">strlen</span>(P);</div><div class="line">  	f[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">  	f[<span class="number">1</span>] = <span class="number">0</span>;</div><div class="line">  	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; ++i) &#123;</div><div class="line">    	<span class="keyword">int</span> j = f[i];</div><div class="line">      	<span class="keyword">while</span> (j &amp;&amp; P[i] != P[j])</div><div class="line">          	j = f[j];</div><div class="line">      	f[i + <span class="number">1</span>] = P[i] == P[j] ? j + <span class="number">1</span> : <span class="number">0</span>;</div><div class="line">  	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>之后可以利用失配函数，计算最后的结果：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">find</span> <span class="params">(<span class="keyword">char</span> *T, <span class="keyword">char</span> *P, <span class="keyword">int</span> *f)</span> </span>&#123;</div><div class="line">  	<span class="keyword">int</span> n = <span class="built_in">strlen</span>(T), m = <span class="built_in">strlen</span>(P);</div><div class="line">  	getFail (P, f);</div><div class="line">  	<span class="keyword">int</span> j = <span class="number">0</span>;</div><div class="line">  	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</div><div class="line">    	<span class="keyword">while</span> (j &amp;&amp; P[j] != T[j]) j = f[j];</div><div class="line">      	<span class="keyword">if</span> (P[j] == T[j]) ++j;</div><div class="line">      	<span class="keyword">if</span> (j == m) print(i - m + <span class="number">1</span>);	<span class="comment">// 找到匹配</span></div><div class="line">  	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于后缀数组，其计算比较简单，但是使用起来比较灵活，这里给出一个比较标准的模版：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> wa[MAXN], wb[MAXN], wv[MAXN], ww[MAXN];</div><div class="line"><span class="keyword">int</span> sa[MAXN];</div><div class="line"><span class="keyword">char</span> str[MAXN];</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> *r, <span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> len)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> r[a] == r[b] &amp;&amp; r[a + len] == r[b + len];  </div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">da</span><span class="params">(<span class="keyword">char</span> *str, <span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;  </div><div class="line">    <span class="keyword">int</span> i, j, p, *x = wa, *y = wb, *t;</div><div class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; m; ++i)</div><div class="line">        ww[i] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; ++i)</div><div class="line">        ww[x[i] = str[i]]++;</div><div class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; m; ++i)</div><div class="line">        ww[i] += ww[i<span class="number">-1</span>];</div><div class="line">    <span class="keyword">for</span>(i = n - <span class="number">1</span>; i  &gt;= <span class="number">0</span>; --i)</div><div class="line">        sa[--ww[x[i]]] = i;</div><div class="line">    <span class="keyword">for</span>(j = p = <span class="number">1</span>; p &lt; n; j &lt;&lt;= <span class="number">1</span>, m = p) &#123;</div><div class="line">        <span class="keyword">for</span>(p = <span class="number">0</span>, i = n - j; i &lt; n; ++i)</div><div class="line">            y[p++]=i;</div><div class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; ++i)</div><div class="line">            <span class="keyword">if</span>(sa[i] &gt;= j)</div><div class="line">                y[p++] = sa[i] - j;</div><div class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; m; ++i)</div><div class="line">            ww[i] = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; ++i)</div><div class="line">            ww[wv[i] = x[y[i]]]++;</div><div class="line">        <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; m; ++i)</div><div class="line">            ww[i] += ww[i<span class="number">-1</span>];</div><div class="line">        <span class="keyword">for</span>(i = n<span class="number">-1</span>; i &gt;= <span class="number">0</span>; --i)</div><div class="line">            sa[--ww[wv[i]]] = y[i];</div><div class="line">        <span class="keyword">for</span>(t = x, x = y, y = t, x[sa[<span class="number">0</span>]] = <span class="number">0</span>, p = i = <span class="number">1</span>; i &lt; n; ++i)</div><div class="line">            x[sa[i]] = cmp(y, sa[i<span class="number">-1</span>], sa[i], j) ? p<span class="number">-1</span> : p++;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h2><h3 id="Poj-2406-Power-Strings"><a href="#Poj-2406-Power-Strings" class="headerlink" title="Poj 2406 Power Strings"></a>Poj 2406 Power Strings</h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><p>Given two strings a and b we define a<em>b to be their concatenation. For example, if a = “abc” and b = “def” then a</em>b = “abcdef”. If we think of concatenation as multiplication, exponentiation by a non-negative integer is defined in the normal way: a^0 = “” (the empty string) and a^(n+1) = a*(a^n).</p>
 <ul>
-<li>求$\sum_{k = i}^j A_k$；</li>
-<li>对某个$A_i$数据进行增减操作。</li>
+<li><p>Input</p>
+<p>Each test case is a line of input representing s, a string of printable characters. The length of s will be at least 1 and will not exceed 1 million characters. A line containing a period follows the last test case.</p>
+</li>
+<li><p>Output</p>
+<p>For each s you should print the largest n such that s = a^n for some string a.</p>
+</li>
 </ul>
-<p>对于这种情况，使用树状数组肯定是十分方便的，而且编程十分的简单。</p>
-<p>但是如果题目的要求更加的灵活，树状数组在很多的情况下是不适和的。(或者更准确的说，对设计技巧要求更高)</p>
-<p>现在需要有一个支持区间更新、区间查询等等操作的数据结构，并且要保证每个操作基本可以在$O(\lg n)$的时间完成。</p>
-<p>于是我们引入了线段树的数据结构。通过将整体区间进行分割，由叶节点管理最小的分割单元，其他节点以类似$2^k$的形式逐层进行管理。</p>
-        
-          <a class="article-more-a" href="/2018/07/19/Segment Tree/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/19/Segment Tree/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-UnionFind" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/19/UnionFind/">并查集</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/19/UnionFind/" class="archive-article-date">
-  	<time datetime="2018-07-19T06:25:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="UnionFind"><a href="#UnionFind" class="headerlink" title="UnionFind"></a>UnionFind</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在计算机科学中，并查集是一种树型的数据结构，用于处理一些不相交集合（Disjoint Sets）的合并及查询问题。有一个联合-查找算法（union-find algorithm）定义了两个用于此数据结构的操作：</p>
+<h4 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h4><p>这道题目需要求出：如果字符串是某一个字串自我重复的结果，找出这个子串，如果有多个子串，选择最短的那一个。</p>
+<p>显然，任何一个字符串都是它自己本身重复一次的结果。这里就需要使用自己本身去匹配自己，不难联想到$KMP$算法里面的失配函数，显然，如果满足右移以后可以匹配自己，那么这里一定存在子串并且满足：经过多次的重复以后，可以拼凑成原串。</p>
+<p>所以，通过计算失配函数，其最后一项一定是满足性质的子串长。如果这个长度可以整除原串长，那么最后的结果就是题目所求的重复次数。</p>
+<h4 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = <span class="number">1000000</span> + <span class="number">5</span>;</div><div class="line"><span class="keyword">char</span> str[MAXN];</div><div class="line"><span class="keyword">int</span> next[MAXN];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">getNext</span><span class="params">(<span class="keyword">size_t</span> length)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> k = <span class="number">-1</span>, j = <span class="number">0</span>;</div><div class="line">    ::next[<span class="number">0</span>] = <span class="number">-1</span>;</div><div class="line">    <span class="keyword">while</span> (j &lt; length) &#123;</div><div class="line">        <span class="keyword">if</span> (k == <span class="number">-1</span> || str[k] == str[j]) &#123;</div><div class="line">            ++k;</div><div class="line">            ++j;</div><div class="line">            ::next[j] = k;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            k = ::next[k];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> LOCAL</span></div><div class="line">    freopen(<span class="string">"input.txt"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%s"</span>, str) &amp;&amp; str[<span class="number">0</span>] != <span class="string">'.'</span>) &#123;</div><div class="line">        <span class="keyword">size_t</span> length = <span class="built_in">strlen</span>(str);</div><div class="line">        getNext(length + <span class="number">1</span>);</div><div class="line">        <span class="keyword">if</span> (!(length % (length - ::next[length]))) &#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%lu\n"</span>, length / (length - ::next[length]));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"1\n"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h4><p>对于$KMP$算法的建表过程，是一个$O(n)$的算法，所以整个算法的复杂度其实就是$O(n)$。</p>
+<h4 id="编程技术技巧"><a href="#编程技术技巧" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><p>这道题目在编程上没有太多的技巧可言，唯一需要注意的是：如何从求重复的子串联想到使用$KMP$算法的失配函数。对于算法还是需要灵活的理解。</p>
+<h3 id="Poj-3693-Maximum-repetition-substring"><a href="#Poj-3693-Maximum-repetition-substring" class="headerlink" title="Poj 3693 Maximum repetition substring"></a>Poj 3693 Maximum repetition substring</h3><h4 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h4><p>The repetition number of a string is defined as the maximum number <em>R</em> such that the string can be partitioned into <em>R</em> same consecutive substrings. For example, the repetition number of “ababab” is 3 and “ababa” is 1.</p>
+<p>Given a string containing lowercase letters, you are to find a substring of it with maximum repetition number.</p>
 <ul>
-<li>$Find$：确定元素属于哪一个子集。它可以被用来确定两个元素是否属于同一子集。</li>
-<li>$Union$：将两个子集合并成同一个集合。</li>
+<li><p>Input</p>
+<p>The input consists of multiple test cases. Each test case contains exactly one line, which<br>gives a non-empty string consisting of lowercase letters. The length of the string will not be greater than 100,000.</p>
+<p>The last test case is followed by a line containing a ‘#’.</p>
+</li>
+<li><p>Output</p>
+<p>For each test case, print a line containing the test case number( beginning with 1) followed by the substring of maximum repetition number. If there are multiple substrings of maximum repetition number, print the lexicographically smallest one.</p>
+</li>
 </ul>
-<p>由于支持这两种操作，一个不相交集也常被称为联合-查找数据结构（union-find data structure）或合并-查找集合（merge-find set）。其他的重要方法，MakeSet，用于建立单元素集合。有了这些方法，许多经典的划分问题可以被解决。<br>为了更加精确的定义这些方法，需要定义如何表示集合。一种常用的策略是为每个集合选定一个固定的元素，称为代表，以表示整个集合。接着，$Find(x)$返回 x 所属集合的代表，而$Union$使用两个集合的代表作为参数。</p>
-<p>更进一步的，当两个元素之间的关系可以量化，并且关系可以合并时，可以使用带权并查集来维护元素之间的关系。</p>
-<p>带权并查集即是结点存有权值信息的并查集。</p>
-        
-          <a class="article-more-a" href="/2018/07/19/UnionFind/#more">more >></a>
-        
+<h4 id="算法设计-1"><a href="#算法设计-1" class="headerlink" title="算法设计"></a>算法设计</h4><p>这道题目是综合难度特别大的一题，设计的概念比较多，其中的$RMQ$算法，将会在下一章提及，这里先不做过多的说明。</p>
+<p>首先，如果仅仅只求出了$sa$数组，其实是不够用的。通常情况下，我们需要定义两个辅助的数组：$rank$和$height$，其中，$rank_i$表示后缀$i$在$sa$数组中的下标。$height<em>i$表示定义为$sa</em>{i - 1}$和$sa_i$的最长公共前缀$(LCP)$的长度。</p>
+<p>如果两个字符串的$LCP$长度为$k$，意味着这两个字符串的前$k$个字符都相同，但是第$k +1$个字符不同。</p>
+<p>对于两个后缀$j$和$k$，不妨设$rank_j &lt; rank_i$，则可以证明后缀$i$和$k$的$LCP$长度为$height[rank_j+1], height[rank_j+2], \dots, height[rank_k]$中的最小值。即为$RMQ(height, rank_j+1, rank_k)$。</p>
+<p>使用以上的方法进行构造以后，可以求解答案。</p>
+<h4 id="程序代码-1"><a href="#程序代码-1" class="headerlink" title="程序代码"></a>程序代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = <span class="number">100000</span> + <span class="number">5</span>;</div><div class="line"><span class="keyword">int</span> wa[MAXN], wb[MAXN], wv[MAXN], ww[MAXN];</div><div class="line"></div><div class="line"><span class="keyword">int</span> Rank[MAXN], sa[MAXN], lcp[MAXN], dp[MAXN][<span class="number">20</span>], tmpRes[MAXN];</div><div class="line"></div><div class="line"><span class="keyword">char</span> str[MAXN];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> *r, <span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> len)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> r[a] == r[b] &amp;&amp; r[a + len] == r[b + len];  </div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">da</span><span class="params">(<span class="keyword">char</span> *str, <span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;  </div><div class="line">    <span class="keyword">int</span> i, j, p, *x = wa, *y = wb, *t;</div><div class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; m; ++i)</div><div class="line">        ww[i] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; ++i)</div><div class="line">        ww[x[i] = str[i]]++;</div><div class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; m; ++i)</div><div class="line">        ww[i] += ww[i<span class="number">-1</span>];</div><div class="line">    <span class="keyword">for</span>(i = n - <span class="number">1</span>; i  &gt;= <span class="number">0</span>; --i)</div><div class="line">        sa[--ww[x[i]]] = i;</div><div class="line">    <span class="keyword">for</span>(j = p = <span class="number">1</span>; p &lt; n; j &lt;&lt;= <span class="number">1</span>, m = p) &#123;</div><div class="line">        <span class="keyword">for</span>(p = <span class="number">0</span>, i = n - j; i &lt; n; ++i)</div><div class="line">            y[p++]=i;</div><div class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; ++i)</div><div class="line">            <span class="keyword">if</span>(sa[i] &gt;= j)</div><div class="line">                y[p++] = sa[i] - j;</div><div class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; m; ++i)</div><div class="line">            ww[i] = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; ++i)</div><div class="line">            ww[wv[i] = x[y[i]]]++;</div><div class="line">        <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; m; ++i)</div><div class="line">            ww[i] += ww[i<span class="number">-1</span>];</div><div class="line">        <span class="keyword">for</span>(i = n<span class="number">-1</span>; i &gt;= <span class="number">0</span>; --i)</div><div class="line">            sa[--ww[wv[i]]] = y[i];</div><div class="line">        <span class="keyword">for</span>(t = x, x = y, y = t, x[sa[<span class="number">0</span>]] = <span class="number">0</span>, p = i = <span class="number">1</span>; i &lt; n; ++i)</div><div class="line">            x[sa[i]] = cmp(y, sa[i<span class="number">-1</span>], sa[i], j) ? p<span class="number">-1</span> : p++;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">getLcp</span><span class="params">(<span class="keyword">char</span> *str, <span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= n; ++i) &#123;</div><div class="line">        Rank[sa[i]] = i;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> h = <span class="number">0</span>;</div><div class="line">    lcp[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</div><div class="line">        <span class="keyword">int</span> j = sa[Rank[i] - <span class="number">1</span>];</div><div class="line">        h ? h-- : <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (; j + h &lt; n &amp;&amp; i + h &lt; n; ++h) &#123;</div><div class="line">            <span class="keyword">if</span> (str[i + h] != str[j + h])</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">        lcp[Rank[i] - <span class="number">1</span>] = h;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">RMQ_init</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</div><div class="line">        dp[i][<span class="number">0</span>] = lcp[i - <span class="number">1</span>];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (<span class="number">1</span> &lt;&lt; i) &lt;= n; ++i) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j + (<span class="number">1</span> &lt;&lt; i) - <span class="number">1</span> &lt;= n; ++j) &#123;</div><div class="line">            dp[j][i] = min(dp[j][i - <span class="number">1</span>], dp[j + (<span class="number">1</span> &lt;&lt; (i - <span class="number">1</span>))][i - <span class="number">1</span>]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">RMQ</span><span class="params">(<span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</div><div class="line">    left = Rank[left];</div><div class="line">    right = Rank[right];</div><div class="line">    <span class="keyword">if</span> (left &gt; right)</div><div class="line">        swap(left, right);</div><div class="line">    ++left;</div><div class="line">    <span class="keyword">int</span> k = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> ((<span class="number">1</span> &lt;&lt; (k + <span class="number">1</span>)) &lt;= right - left + <span class="number">1</span>)</div><div class="line">        ++k;</div><div class="line">    <span class="keyword">return</span> min(dp[left][k], dp[right - (<span class="number">1</span> &lt;&lt; k) + <span class="number">1</span>][k]);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> LOCAL</span></div><div class="line">    freopen(<span class="string">"input.txt"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%s"</span>, str) &amp;&amp; str[<span class="number">0</span>] != <span class="string">'#'</span>) &#123;</div><div class="line">        <span class="keyword">int</span> length = (<span class="keyword">int</span>)<span class="built_in">strlen</span>(str);</div><div class="line">        da(str, length + <span class="number">1</span>, <span class="string">'z'</span> + <span class="number">1</span>);</div><div class="line">        getLcp(str, length);</div><div class="line">        RMQ_init(length);</div><div class="line">        <span class="keyword">int</span> maxMatch = <span class="number">-1</span>;</div><div class="line">        <span class="keyword">int</span> cnt = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> len = <span class="number">1</span>; len &lt;= length; ++len) &#123;</div><div class="line">            <span class="keyword">int</span> match;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i + len &lt; length; i += len) &#123;</div><div class="line">                match = RMQ(i, i + len);</div><div class="line">                <span class="keyword">int</span> pos = i - (len - match % len);</div><div class="line">                match = match / len + <span class="number">1</span>;</div><div class="line">                <span class="keyword">if</span> (pos &gt;= <span class="number">0</span> &amp;&amp; RMQ(pos, pos + len) &gt;= len)</div><div class="line">                    ++match;</div><div class="line">                <span class="keyword">if</span> (maxMatch &lt; match) &#123;</div><div class="line">                    maxMatch = match;</div><div class="line">                    cnt = <span class="number">0</span>;</div><div class="line">                    tmpRes[cnt++] = len;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (maxMatch == match &amp;&amp; len != tmpRes[cnt - <span class="number">1</span>])</div><div class="line">                    tmpRes[cnt++] = len;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">bool</span> flag = <span class="literal">false</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= length &amp;&amp; !flag; ++i) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cnt &amp;&amp; !flag; ++j) &#123;</div><div class="line">                <span class="keyword">if</span> (RMQ(sa[i], sa[i] + tmpRes[j]) &gt;= tmpRes[j] * (maxMatch - <span class="number">1</span>)) &#123;</div><div class="line">                    str[sa[i] + tmpRes[j] * maxMatch] = <span class="string">'\0'</span>;</div><div class="line">                    flag = <span class="literal">true</span>;</div><div class="line">                    <span class="built_in">printf</span>(<span class="string">"Case %d: %s\n"</span>, ++count, str + sa[i]);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="性能分析-1"><a href="#性能分析-1" class="headerlink" title="性能分析"></a>性能分析</h4><p>对于后缀数组而言，需要的构造时间是$O(n\lg n)$。而$RMQ$可以做到$O(n\lg n)$的建立时间，和$O(1)$的查询时间。所以总的时间为$O(n\lg n)$。</p>
+<h4 id="编程技术技巧-1"><a href="#编程技术技巧-1" class="headerlink" title="编程技术技巧"></a>编程技术技巧</h4><p>此题难度在于多种解题技巧的混合应用，单单就编程方面来说，技巧不是特别的多。</p>
+<p>不过在最后进行输出的时候，可以直接利用<code>printf</code>的性质，将索引到的字符串尾部添加<code>\0</code>可以直接输出。</p>
+
       
 
       
@@ -392,16 +298,75 @@ ga('send', 'pageview');
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/19/UnionFind/">阅读全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/19/Suffix Array/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/19/ASPLOS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ASPLOS半日行</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -416,94 +381,33 @@ ga('send', 'pageview');
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-System of Difference Constraints" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/19/System of Difference Constraints/">差分约束系统</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/19/System of Difference Constraints/" class="archive-article-date">
-  	<time datetime="2018-07-19T06:25:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="System-of-Difference-Constraints"><a href="#System-of-Difference-Constraints" class="headerlink" title="System of Difference Constraints"></a>System of Difference Constraints</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先先引入一个通用的线性规划问题，给定一个$m \times n$的矩阵A，一个$m$维的向量$b$和一个$n$维向量$c$。希望能够找到一个$n$维的向量$x$，使得在由$Ax \leqslant b$给定的$m$个约束条件下优化目标函数$\sum_{i = 1}^n c_ix_i$，使得目标函数的取值最大。有时，我们并不关心目标函数，而是仅仅希望能找到一个<strong>可行解</strong>，即找到任何满足$Ax \leqslant b$的向量$x$，或者判断不存在可行解。</p>
-<p>观察一个特例情况，如果线性规划的矩阵$A$的每一行包括一个1和一个-1，其他的所有项皆为0。则对于$Ax \leqslant b$所给出的约束条件变为$m$个涉及$n$个变量的<strong>差额限制条件</strong>，此时每个约束条件退化为简单的线性不等式：$x_j - x_i \leqslant b_k$。这里$1 \leqslant i, j \leqslant n$，$i \neq j$，且$1 \leqslant k \leqslant m$。</p>
-        
-          <a class="article-more-a" href="/2018/07/19/System of Difference Constraints/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/19/System of Difference Constraints/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Suffix-Array"><span class="toc-number">1.</span> <span class="toc-text">Suffix Array</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法介绍"><span class="toc-number">1.2.</span> <span class="toc-text">算法介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题建模"><span class="toc-number">1.2.1.</span> <span class="toc-text">问题建模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#求解方法"><span class="toc-number">1.2.2.</span> <span class="toc-text">求解方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题报告"><span class="toc-number">1.3.</span> <span class="toc-text">解题报告</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Poj-2406-Power-Strings"><span class="toc-number">1.3.1.</span> <span class="toc-text">Poj 2406 Power Strings</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题描述-1"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法设计"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">算法设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#程序代码"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">程序代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#性能分析"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">性能分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编程技术技巧"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">编程技术技巧</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Poj-3693-Maximum-repetition-substring"><span class="toc-number">1.3.2.</span> <span class="toc-text">Poj 3693 Maximum repetition substring</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题描述-2"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法设计-1"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">算法设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#程序代码-1"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">程序代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#性能分析-1"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">性能分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编程技术技巧-1"><span class="toc-number">1.3.2.5.</span> <span class="toc-text">编程技术技巧</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
-        
+        <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=3gX5c0OljPQyVGvzyknjOnOEDB1Szg8eAM2NoZxuz50"></script>
         
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+
   
 
 
@@ -526,8 +430,8 @@ ga('send', 'pageview');
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
