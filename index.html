@@ -175,30 +175,36 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Functional Programming" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2018华中科技大学计算机学院保研机试真题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/01/Functional Programming/">函数式语言SML简介</a>
+      <a class="article-title" href="/2018/09/14/2018华中科技大学计算机学院保研机试真题/">2018华中科技大学计算机学院保研机试真题</a>
     </h1>
   
 
         
-        <a href="/2018/05/01/Functional Programming/" class="archive-article-date">
-  	<time datetime="2018-04-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-01</time>
+        <a href="/2018/09/14/2018华中科技大学计算机学院保研机试真题/" class="archive-article-date">
+  	<time datetime="2018-09-14T06:42:34.263Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="函数式语言SML简介"><a href="#函数式语言SML简介" class="headerlink" title="函数式语言SML简介"></a>函数式语言SML简介</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>从函数式语言家族的起源来看，其问世以来的数十年间，始终是作为一类小众的语言。大多数情况下，只有实验室对其进行一些理论上的研究。但是，随着编程语言的不断发展，我们看到越来越多的主流语言，将函数式特性或者函数式思想纳入到了自己的体系之中。</p>
-<p>通过对于函数式语言特性的分析，我们可以了解到其独特的优点。正式由于其严格的类型检查和良好的封装，使得程序员能加不容易写出错误的程序。同时，得益于其数学思想，程序员可以很方便的写出更加优雅且利于并行的程序。这正是函数式特性在现代编程语言如C++、Java、Python不断得到加强的原因。</p>
+        <h1 id="2018华中科技大学计算机学院保研机试真题"><a href="#2018华中科技大学计算机学院保研机试真题" class="headerlink" title="2018华中科技大学计算机学院保研机试真题"></a>2018华中科技大学计算机学院保研机试真题</h1><blockquote>
+<p>写在最前面</p>
+<p>侥幸在保研上机的时候拿到满分，在此记录下考试的题目以及一些体会。</p>
+<p>因为考试试卷和答案代码均不能带出考场，以下内容皆为回忆版，附上我仓促写的答案代码，如有不妥还望指教。</p>
+</blockquote>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>机考成绩在保研中占比越来越重，在最后参加机考的人里，加权相差也不会太大，而机考可以轻轻松松拉开二三十分的差距，所以不夸张的说，上机考试<strong>一考定乾坤</strong>。</p>
+<p>不过学院一直在淡化机考，突出CCF CSP考试的重要性，往后有可能只将CCF CSP作为上机<strong>唯一标准</strong>，所以希望学弟学妹尽早把CSP刷高。当然，CSP难度比机考大很多，但所谓 “取法乎上，仅得乎中”，如果仅仅准备学院机考，最后成绩可能也未必理想。</p>
+<p>Leetcode以及牛客网上的题目比较偏重于完成某个小函数，可能与机考以及CSP套路不太相同，这里更推荐刘汝佳大佬的《算法竞赛入门经典》，完成了上面一定量的题目后，学院机考便不在话下。</p>
         
-          <a class="article-more-a" href="/2018/05/01/Functional Programming/#more">more >></a>
+          <a class="article-more-a" href="/2018/09/14/2018华中科技大学计算机学院保研机试真题/#more">more >></a>
         
       
 
@@ -212,7 +218,7 @@ ga('send', 'pageview');
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">函数式</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">保研</a>
         		</li>
       		
 		</ul>
@@ -222,7 +228,7 @@ ga('send', 'pageview');
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/01/Functional Programming/">阅读全文 >></a>
+          <a class="article-more-a" href="/2018/09/14/2018华中科技大学计算机学院保研机试真题/">阅读全文 >></a>
         </p>
       
 
@@ -331,6 +337,83 @@ ga('send', 'pageview');
 
 
   
+    <article id="post-Functional Programming" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/01/Functional Programming/">函数式语言SML简介</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/01/Functional Programming/" class="archive-article-date">
+  	<time datetime="2018-04-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="函数式语言SML简介"><a href="#函数式语言SML简介" class="headerlink" title="函数式语言SML简介"></a>函数式语言SML简介</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>从函数式语言家族的起源来看，其问世以来的数十年间，始终是作为一类小众的语言。大多数情况下，只有实验室对其进行一些理论上的研究。但是，随着编程语言的不断发展，我们看到越来越多的主流语言，将函数式特性或者函数式思想纳入到了自己的体系之中。</p>
+<p>通过对于函数式语言特性的分析，我们可以了解到其独特的优点。正式由于其严格的类型检查和良好的封装，使得程序员能加不容易写出错误的程序。同时，得益于其数学思想，程序员可以很方便的写出更加优雅且利于并行的程序。这正是函数式特性在现代编程语言如C++、Java、Python不断得到加强的原因。</p>
+        
+          <a class="article-more-a" href="/2018/05/01/Functional Programming/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">函数式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/01/Functional Programming/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Suffix Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -383,6 +466,169 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/26/Suffix Array/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Binary Indexed Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/26/Binary Indexed Tree/">树状数组</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/26/Binary Indexed Tree/" class="archive-article-date">
+  	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Binary-Indexed-Tree"><a href="#Binary-Indexed-Tree" class="headerlink" title="Binary Indexed Tree"></a>Binary Indexed Tree</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来引入一个问题：</p>
+<p>给定$n$个数字，有两种频繁的操作需要处理：</p>
+<ul>
+<li>求$\sum_{k = i}^j A_k$；</li>
+<li>对某个$A_i$数据进行增减操作。</li>
+</ul>
+<p>如果我们使用普通的数组，这两种操作的复杂度分别为$O(n)$和$O(1)$，如果进行$m$次操作，最坏的情况下，复杂度是$O(mn)$的。</p>
+<p>所以，为了降低复杂度，我们可以使用一种数组数组的结构，可以将复杂度降低到$O(m\lg n)$。当然，可以使用$RMQ$的方法，但是$RMQ$的编程实现稍微麻烦些，所以这里介绍数组数组的方法。</p>
+        
+          <a class="article-more-a" href="/2018/01/26/Binary Indexed Tree/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/26/Binary Indexed Tree/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-LCA and RMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/26/LCA and RMQ/">LCA 与 RMQ 问题</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/26/LCA and RMQ/" class="archive-article-date">
+  	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="LCA-and-RMQ"><a href="#LCA-and-RMQ" class="headerlink" title="LCA and RMQ"></a>LCA and RMQ</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>LCA问题，即最近公共祖先问题。(Lowest common ancestor)</p>
+<p>指在一个树或者有向无环图中同时拥有v和w作为后代的最深的节点。在这里，定义一个节点也是其自己的后代，因此如果v是w的后代，那么w就是v和w的最近公共祖先。</p>
+<p>RMQ问题，即范围最值查询问题。(Range Minimum Query)</p>
+<p>针对数据集的一种条件查询。若给定一个数组$A[1, n]$范围最值查询指定一个范围条件$i$到$j$，要求取出$A[i, j]$中最大/小的元素。</p>
+<p>特别的，如果$A$上，任意两个相邻元素相差为$\pm1$，则称此$RMQ$问题为$\pm1RMQ$问题。</p>
+        
+          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/">阅读全文 >></a>
         </p>
       
 
@@ -580,246 +826,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Binary Indexed Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/Binary Indexed Tree/">树状数组</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/Binary Indexed Tree/" class="archive-article-date">
-  	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Binary-Indexed-Tree"><a href="#Binary-Indexed-Tree" class="headerlink" title="Binary Indexed Tree"></a>Binary Indexed Tree</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来引入一个问题：</p>
-<p>给定$n$个数字，有两种频繁的操作需要处理：</p>
-<ul>
-<li>求$\sum_{k = i}^j A_k$；</li>
-<li>对某个$A_i$数据进行增减操作。</li>
-</ul>
-<p>如果我们使用普通的数组，这两种操作的复杂度分别为$O(n)$和$O(1)$，如果进行$m$次操作，最坏的情况下，复杂度是$O(mn)$的。</p>
-<p>所以，为了降低复杂度，我们可以使用一种数组数组的结构，可以将复杂度降低到$O(m\lg n)$。当然，可以使用$RMQ$的方法，但是$RMQ$的编程实现稍微麻烦些，所以这里介绍数组数组的方法。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/Binary Indexed Tree/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/Binary Indexed Tree/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-LCA and RMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/LCA and RMQ/">LCA 与 RMQ 问题</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/26/LCA and RMQ/" class="archive-article-date">
-  	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="LCA-and-RMQ"><a href="#LCA-and-RMQ" class="headerlink" title="LCA and RMQ"></a>LCA and RMQ</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>LCA问题，即最近公共祖先问题。(Lowest common ancestor)</p>
-<p>指在一个树或者有向无环图中同时拥有v和w作为后代的最深的节点。在这里，定义一个节点也是其自己的后代，因此如果v是w的后代，那么w就是v和w的最近公共祖先。</p>
-<p>RMQ问题，即范围最值查询问题。(Range Minimum Query)</p>
-<p>针对数据集的一种条件查询。若给定一个数组$A[1, n]$范围最值查询指定一个范围条件$i$到$j$，要求取出$A[i, j]$中最大/小的元素。</p>
-<p>特别的，如果$A$上，任意两个相邻元素相差为$\pm1$，则称此$RMQ$问题为$\pm1RMQ$问题。</p>
-        
-          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/LCA and RMQ/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-System of Difference Constraints" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/24/System of Difference Constraints/">差分约束系统</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/24/System of Difference Constraints/" class="archive-article-date">
-  	<time datetime="2018-01-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="System-of-Difference-Constraints"><a href="#System-of-Difference-Constraints" class="headerlink" title="System of Difference Constraints"></a>System of Difference Constraints</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先先引入一个通用的线性规划问题，给定一个$m \times n$的矩阵A，一个$m$维的向量$b$和一个$n$维向量$c$。希望能够找到一个$n$维的向量$x$，使得在由$Ax \leqslant b$给定的$m$个约束条件下优化目标函数$\sum_{i = 1}^n c_ix_i$，使得目标函数的取值最大。有时，我们并不关心目标函数，而是仅仅希望能找到一个<strong>可行解</strong>，即找到任何满足$Ax \leqslant b$的向量$x$，或者判断不存在可行解。</p>
-<p>观察一个特例情况，如果线性规划的矩阵$A$的每一行包括一个1和一个-1，其他的所有项皆为0。则对于$Ax \leqslant b$所给出的约束条件变为$m$个涉及$n$个变量的<strong>差额限制条件</strong>，此时每个约束条件退化为简单的线性不等式：$x_j - x_i \leqslant b_k$。这里$1 \leqslant i, j \leqslant n$，$i \neq j$，且$1 \leqslant k \leqslant m$。</p>
-        
-          <a class="article-more-a" href="/2018/01/24/System of Difference Constraints/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">POJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/24/System of Difference Constraints/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -936,6 +942,10 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">保研</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随感</a>
