@@ -6,23 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>配置overleaf服务器教程 | 李恺林的四维空间</title>
+  <title>Set Overleaf server | 李恺林的四维空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="配置overleaf服务器教程
 安装docker
 以Ubuntu为例：安装，其他系统的安装问题可Google解决。
 国内用户下载docker镜像很慢，可以使用国内镜像加速服务。亲测阿里云的加速比中科大快很多，推荐使用阿里云（内含配置教程）。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="配置overleaf服务器教程">
-<meta property="og:url" content="http://yoursite.com/2020/04/16/配置overleaf服务器教程/index.html">
+<meta property="og:title" content="Set Overleaf server">
+<meta property="og:url" content="http://yoursite.com/2020/04/16/Set Overleaf server/index.html">
 <meta property="og:site_name" content="李恺林的四维空间">
 <meta property="og:description" content="配置overleaf服务器教程
 安装docker
 以Ubuntu为例：安装，其他系统的安装问题可Google解决。
 国内用户下载docker镜像很慢，可以使用国内镜像加速服务。亲测阿里云的加速比中科大快很多，推荐使用阿里云（内含配置教程）。">
-<meta property="og:updated_time" content="2020-04-16T10:40:40.209Z">
+<meta property="og:updated_time" content="2020-04-16T10:58:34.554Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="配置overleaf服务器教程">
+<meta name="twitter:title" content="Set Overleaf server">
 <meta name="twitter:description" content="配置overleaf服务器教程
 安装docker
 以Ubuntu为例：安装，其他系统的安装问题可Google解决。
@@ -183,19 +183,19 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-配置overleaf服务器教程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Set Overleaf server" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      配置overleaf服务器教程
+      Set Overleaf server
     </h1>
   
 
         
-        <a href="/2020/04/16/配置overleaf服务器教程/" class="archive-article-date">
+        <a href="/2020/04/16/Set Overleaf server/" class="archive-article-date">
   	<time datetime="2020-04-16T10:12:43.452Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
 </a>
         
@@ -222,7 +222,9 @@ ga('send', 'pageview');
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">cp -a 2019 2020</div><div class="line"></div><div class="line">wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh</div><div class="line">sh update-tlmgr-latest.sh -- --upgrade</div><div class="line"></div><div class="line"># 国内同学请切换清华源</div><div class="line">tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/</div><div class="line"></div><div class="line"># 耗时略长</div><div class="line">tlmgr update --self --all</div><div class="line">luaotfload-tool -fu</div><div class="line"></div><div class="line"># 耗时极长，建议考虑screen命令，防止断开</div><div class="line">tlmgr install scheme-full</div><div class="line"></div><div class="line">exit</div></pre></td></tr></table></figure>
 </li>
 <li><p>创建用户</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 重启</div><div class="line">docker restart sharelatex</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 重启</div><div class="line">docker restart sharelatex</div><div class="line"></div><div class="line"># 设置admin账号</div><div class="line">docker exec sharelatex /bin/bash -c &quot;cd /var/www/sharelatex; grunt user:create-admin --email=yourname@example.com&quot;</div></pre></td></tr></table></figure>
+<p>按照提示浏览器登录：<code>http://localhost:50000/user/password/set?passwordResetToken=&lt;token&gt;</code></p>
+<p>基础配置成功。</p>
 </li>
 <li><p>配置中文环境</p>
 </li>
@@ -300,7 +302,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/16/配置overleaf服务器教程/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/16/Set Overleaf server/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -477,15 +479,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">保研</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随感</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">联创</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">保研</a>
               </li>
              
               <li class="article-tag-list-item">
