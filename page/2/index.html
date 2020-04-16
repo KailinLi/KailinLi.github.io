@@ -175,19 +175,19 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-UnionFind" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Suffix Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/26/UnionFind/">并查集</a>
+      <a class="article-title" href="/2018/01/26/Suffix Array/">后缀数组</a>
     </h1>
   
 
         
-        <a href="/2018/01/26/UnionFind/" class="archive-article-date">
+        <a href="/2018/01/26/Suffix Array/" class="archive-article-date">
   	<time datetime="2018-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-26</time>
 </a>
         
@@ -195,16 +195,14 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="UnionFind"><a href="#UnionFind" class="headerlink" title="UnionFind"></a>UnionFind</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在计算机科学中，并查集是一种树型的数据结构，用于处理一些不相交集合（Disjoint Sets）的合并及查询问题。有一个联合-查找算法（union-find algorithm）定义了两个用于此数据结构的操作：</p>
-<ul>
-<li>$Find$：确定元素属于哪一个子集。它可以被用来确定两个元素是否属于同一子集。</li>
-<li>$Union$：将两个子集合并成同一个集合。</li>
-</ul>
-<p>由于支持这两种操作，一个不相交集也常被称为联合-查找数据结构（union-find data structure）或合并-查找集合（merge-find set）。其他的重要方法，MakeSet，用于建立单元素集合。有了这些方法，许多经典的划分问题可以被解决。<br>为了更加精确的定义这些方法，需要定义如何表示集合。一种常用的策略是为每个集合选定一个固定的元素，称为代表，以表示整个集合。接着，$Find(x)$返回 x 所属集合的代表，而$Union$使用两个集合的代表作为参数。</p>
-<p>更进一步的，当两个元素之间的关系可以量化，并且关系可以合并时，可以使用带权并查集来维护元素之间的关系。</p>
-<p>带权并查集即是结点存有权值信息的并查集。</p>
+        <h1 id="Suffix-Array"><a href="#Suffix-Array" class="headerlink" title="Suffix Array"></a>Suffix Array</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>首先来考虑一个字符串匹配的问题。</p>
+<p>假设文本是一个长度为$n$的字符串$T$，模版是一个长度为$m$的字符串$P$，并且$m \leqslant n$。需要求出模版在文本中的所有匹配点$i$。如下图：</p>
+<p><img src="http://oklhb00qa.bkt.clouddn.com/Poj/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6-5.png" width="50%" align=center /></p>
+<p>这个问题可以通过$KMP$算法解决。</p>
+<p>但是如果匹配的模版有多个的时候，$KMP$算法不太合适，因为每次查找一个模版，都要遍历整个文本串。</p>
+<p>或者说，更进一步的，如果我们都不能提前知道需要进行匹配的模版，需要我们对于一些动态的模版进行匹配，为了满足速度的要求，我们只能通过预处理$T$串，引入了后缀数组的概念。</p>
         
-          <a class="article-more-a" href="/2018/01/26/UnionFind/#more">more >></a>
+          <a class="article-more-a" href="/2018/01/26/Suffix Array/#more">more >></a>
         
       
 
@@ -228,7 +226,7 @@ ga('send', 'pageview');
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/26/UnionFind/">阅读全文 >></a>
+          <a class="article-more-a" href="/2018/01/26/Suffix Array/">阅读全文 >></a>
         </p>
       
 
